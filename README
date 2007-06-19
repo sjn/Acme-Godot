@@ -1,0 +1,22 @@
+Acme-Godot version 0.1.0
+
+This module will make your program wait for Godot. Please consult
+the module documentation for further insights.
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+    perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2007, Salve J. Nilsen
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
