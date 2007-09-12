@@ -1,6 +1,6 @@
 ---
 name: Acme-Godot
-version: 0.001000
+version: 0.001001
 author:
   - 'Salve J. Nilsen <sjn@cpan.org>'
 abstract: Nothing to be done
@@ -16,8 +16,8 @@ build_requires:
 provides:
   Acme::Godot:
     file: lib/Acme/Godot.pm
-    version: 0.001000
-generated_by: Module::Build version 0.2805
+    version: 0.001001
+generated_by: Module::Build version 0.2807
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2

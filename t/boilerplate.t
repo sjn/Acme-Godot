@@ -9,8 +9,8 @@ use strict;
 use warnings;
 use Test::More;
 
-plan skip_all => 'For authors only (set PERL_AUTHOR_TEST to run.)'
-    unless $ENV{PERL_AUTHOR_TEST};
+plan skip_all => 'For authors only (set PERL5_AUTHOR_TEST to run.)'
+    unless $ENV{PERL5_AUTHOR_TEST};
 
 plan tests => 3;
 

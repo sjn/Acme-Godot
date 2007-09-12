@@ -3,3 +3,6 @@ Revision history for Acme-Godot
 0.1.0  
        Initial release.
 
+0.1.1
+       Update module dependency recommendations, add a test
+

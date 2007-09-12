@@ -7,14 +7,16 @@ use strict;
 use warnings;
 use Test::More;
 
-plan skip_all => 'For authors only (set PERL_AUTHOR_TEST to run.)'
-    unless $ENV{PERL_AUTHOR_TEST};
+plan skip_all => 'For authors only (set PERL5_AUTHOR_TEST to run.)'
+    unless $ENV{PERL5_AUTHOR_TEST};
 
 eval 'use Test::Perl::Critic;';  ## no critic
 plan skip_all => "Test::Perl::Critic required for testing PBP compliance"
     if $@;
 
-use Perl::Critic::Utils qw(all_perl_files);
+eval 'use Perl::Critic::Utils qw(all_perl_files);';  ## no critic
+plan skip_all => "Perl::Critic::Utils required for testing PBP compliance"
+    if $@;
 
 my @files = ( all_perl_files('blib'), grep {m/\.t\z/} all_perl_files('t') );
 plan tests => scalar @files;

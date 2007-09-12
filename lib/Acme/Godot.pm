@@ -6,7 +6,7 @@
 use strict;
 package Acme::Godot;
 
-use version; our $VERSION = qv(0.1.0)->numify;
+use version; our $VERSION = qv(0.1.1)->numify;
 
 # Module implementation here
 
@@ -43,7 +43,7 @@ Acme::Godot - Nothing to be done
 
 =head1 VERSION
 
-This document describes Acme::Godot version 0.1.0
+This document describes Acme::Godot version 0.1.1
 
 
 =head1 SYNOPSIS
@@ -101,6 +101,11 @@ None reported. We're still waiting for Godot to bring the test reports.
 =head1 BUGS AND LIMITATIONS
 
 No bugs have been reported. Where's Godot with the bug reports?
+
+
+=head1 ACKNOWLEDGEMENTS
+
+Thanks to mr. Rune Sandnes for the inspiration.
 
 
 =head1 AUTHOR

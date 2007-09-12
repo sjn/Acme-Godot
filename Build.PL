@@ -17,6 +17,13 @@ my $builder = Module::Build->new(
     build_requires => {
         'Test::Exception' => 0,
     },
+    build_recommends => {
+        'Test::Perl::Critic' => 1,
+        'Perl::Critic' => 0.18,
+        'Test::Pod' => 1.14,
+        'Test::Pod::Coverage' => 1.04,
+        'Test::Kwalitee' => 0,
+    },
     requires => {
         'perl'       => '5.5.63',         # First version with our()
         'Test::More' => 0,
