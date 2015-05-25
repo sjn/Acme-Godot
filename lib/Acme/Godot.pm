@@ -1,49 +1,42 @@
 #This is a -*- perl -*- module file
 #
-# Copyright (c) 2007 Salve J. Nilsen
+# Copyright (c) 2007-2015 Salve J. Nilsen
 #
 
 use strict;
+
 package Acme::Godot;
 
-use version; our $VERSION = qv(0.1.1)->numify;
-
-# Module implementation here
+use version; our $VERSION = version->parse(0.1.10)->numify;
 
 BEGIN {
     eval {
         sub _waiting_for_godot {
-            sleep 60 * 60 * 24;        # Act 1 - the first day
-            sleep 60 * 60 * 24 * 365;  # Intermission. Get your snacks!
-            sleep 60 * 60 * 24;        # Act 2 - the second day
+            sleep 60 * 60 * 24;          # Act 1 - the first day
+            sleep 60 * 60 * 24 * 365;    # Intermission. Get your snacks!
+            sleep 60 * 60 * 24;          # Act 2 - the second day
         }
 
         sub _godot_has_arrived {
-            0;  # Nowhere to be seen.
+            0;                           # Nowhere to be seen.
         }
     };
 
-    PLAY: while (! _godot_has_arrived() ) {
+PLAY: while (!_godot_has_arrived()) {
         _waiting_for_godot();
         redo PLAY unless _godot_has_arrived();
-    }
-    continue {
-        exit;    # The play is over! Godot is here!
+    } continue {
+        exit;    # Rejoice, Godot is here! Let's get outta here.
     }
 }
 
 
-1; # End of Acme::Godot 
+1;               # End of Acme::Godot
 __END__
 
 =head1 NAME
 
 Acme::Godot - Nothing to be done
-
-
-=head1 VERSION
-
-This document describes Acme::Godot version 0.1.1
 
 
 =head1 SYNOPSIS
@@ -56,7 +49,17 @@ This document describes Acme::Godot version 0.1.1
 This module will make your program wait for Godot.
 
 
-=head1 INTERFACE 
+=head1 INSTALLATION
+
+To install this module, run the following commands:
+
+    perl Build.PL
+    ./Build
+    ./Build test
+    ./Build install
+
+
+=head1 INTERFACE
 
 Acme::Godot does not have an interface, and need only to be used
 by another program in order to start waiting.
@@ -115,7 +118,7 @@ Salve J. Nilsen  C<< <sjn@cpan.org> >>
 
 =head1 LICENCE AND COPYRIGHT
 
-Copyright (c) 2007, Salve J. Nilsen C<< <sjn@cpan.org> >>. All rights reserved.
+Copyright (c) 2007-2015, Salve J. Nilsen C<< <sjn@cpan.org> >>. All rights reserved.
 
 This module is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself. See L<perlartistic>.
